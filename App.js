@@ -16,7 +16,7 @@ import {
 import Icon                 from 'react-native-vector-icons/Ionicons'
 
 import HomeScreen           from './src/screens/Home/Home'
-import StackScreen          from './src/screens/Stack/Stack'
+import TopicsScreen         from './src/screens/Topics/Topics'
 import DetailsScreen        from './src/screens/Details/Details'
 import ListScreen           from './src/screens/List/List'
 
@@ -90,7 +90,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   if(routeName === 'Home') {
     iconName = 'ios-home'
   }
-  else if(routeName === 'Stack') {
+  else if(routeName === 'Topics') {
     iconName = `ios-desktop`
   }
 
@@ -112,12 +112,12 @@ HomeStack.navigationOptions = ({ navigation }) => {
   return { tabBarVisible }
 }
 
-const StackStack    = createStackNavigator({
-  Stack:    StackScreen,
+const TopicsStack    = createStackNavigator({
+  Topics:    TopicsScreen,
   List:     ListScreen,
 })
 
-StackStack.navigationOptions = ({navigation}) => {
+TopicsStack.navigationOptions = ({navigation}) => {
   let tabBarVisible = true
   if(navigation.state.index > 0) {
     tabBarVisible = false
@@ -129,7 +129,7 @@ StackStack.navigationOptions = ({navigation}) => {
 const AppNavigator  = createBottomTabNavigator(
   {
     Home:     { screen: HomeStack },
-    Stack:    { screen: StackStack },
+    Topics:   { screen: TopicsStack },
   },
   {
     defaultNavigationOptions: ({navigation}) => ({

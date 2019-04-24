@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// src/screens/Stack.js
+// src/screens/Topics.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
@@ -10,11 +10,11 @@ import {
 
 import styles                 from './styles'
 
-class StackScreen extends Component {
+class TopicsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Stacked Screen</Text>
+        <Text>Topics Screen</Text>
         <Button
           title   = 'Go to List'
           onPress = { () => this.props.navigation.navigate('List') }
@@ -24,4 +24,4 @@ class StackScreen extends Component {
   }
 }
 
-export default StackScreen
+export default TopicsScreen
