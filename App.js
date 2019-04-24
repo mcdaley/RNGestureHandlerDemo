@@ -10,12 +10,15 @@ import {
 }                           from 'react-native';
 import {
   createBottomTabNavigator,
+  createStackNavigator,
   createAppContainer
 }                           from 'react-navigation'
 import Icon                 from 'react-native-vector-icons/Ionicons'
 
 import HomeScreen           from './src/screens/Home/Home'
 import StackScreen          from './src/screens/Stack/Stack'
+import DetailsScreen        from './src/screens/Details/Details'
+import ListScreen           from './src/screens/List/List'
 
 /**********
 class HomeScreen extends Component {
@@ -95,10 +98,38 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   return <Icon name={iconName} size={24} color={tintColor} />
 }
 
-const AppNavigator = createBottomTabNavigator(
+const HomeStack     = createStackNavigator({
+  Home:     HomeScreen,
+  Details:  DetailsScreen,
+})
+
+HomeStack.navigationOptions = ({ navigation }) => {
+  let tabBarVisible = true
+  if(navigation.state.index > 0) {
+    tabBarVisible = false
+  }
+
+  return { tabBarVisible }
+}
+
+const StackStack    = createStackNavigator({
+  Stack:    StackScreen,
+  List:     ListScreen,
+})
+
+StackStack.navigationOptions = ({navigation}) => {
+  let tabBarVisible = true
+  if(navigation.state.index > 0) {
+    tabBarVisible = false
+  }
+
+  return { tabBarVisible }
+}
+
+const AppNavigator  = createBottomTabNavigator(
   {
-    Home:     { screen: HomeScreen },
-    Stack:    { screen: StackScreen },
+    Home:     { screen: HomeStack },
+    Stack:    { screen: StackStack },
   },
   {
     defaultNavigationOptions: ({navigation}) => ({

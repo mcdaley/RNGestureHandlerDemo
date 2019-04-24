@@ -1,27 +1,25 @@
 //-----------------------------------------------------------------------------
-// src/screens/Stack.js
+// src/screens/List/List.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
   View,
   Text,
-  Button,
 }                             from 'react-native'
+import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
-class StackScreen extends Component {
+class ListScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Stacked Screen</Text>
-        <Button
-          title   = 'Go to List'
-          onPress = { () => this.props.navigation.navigate('List') }
-        />
+        <Text>List Screen</Text>
+        <Icon name='ios-radio' size={48} color='cyan' />
       </View>
     )
   }
 }
 
-export default StackScreen
+// Export the ListScreen
+export default ListScreen

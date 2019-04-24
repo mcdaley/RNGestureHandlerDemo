@@ -1,27 +1,25 @@
 //-----------------------------------------------------------------------------
-// src/screens/Stack.js
+// src/screens/Details/Details.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
   View,
   Text,
-  Button,
 }                             from 'react-native'
+import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
-class StackScreen extends Component {
+class DetailsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Stacked Screen</Text>
-        <Button
-          title   = 'Go to List'
-          onPress = { () => this.props.navigation.navigate('List') }
-        />
+        <Text>Details Screen</Text>
+        <Icon name='ios-flash' size={48} color='orange' />
       </View>
     )
   }
 }
 
-export default StackScreen
+// Export the DetailsScreen
+export default DetailsScreen

@@ -5,6 +5,7 @@ import React, { Component }   from 'react'
 import {
   View,
   Text,
+  Button,
 }                             from 'react-native'
 import Icon                   from 'react-native-vector-icons/Ionicons'
 
@@ -16,6 +17,10 @@ class HomeScreen extends Component {
       <View style={styles.container}>
         <Text>Home Screen</Text>
         <Icon name='ios-home' size={48} color='blue' />
+        <Button
+          title   = 'Go to Details'
+          onPress = { () => this.props.navigation.navigate('Details') }
+        />
       </View>
     )
   }

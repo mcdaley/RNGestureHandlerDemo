@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------------
-// src/screens/Home/styles.js
+// src/screens/List/styles.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 /**
- * HomeScreen Styles
+ * ListScreen Styles
  */
 const styles = StyleSheet.create({
   container: {
