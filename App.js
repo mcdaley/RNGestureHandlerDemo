@@ -9,10 +9,15 @@ import {
   Button,
 }                           from 'react-native';
 import {
-  createStackNavigator,
+  createBottomTabNavigator,
   createAppContainer
 }                           from 'react-navigation'
+import Icon                 from 'react-native-vector-icons/Ionicons'
 
+import HomeScreen           from './src/screens/Home/Home'
+import StackScreen          from './src/screens/Stack/Stack'
+
+/**********
 class HomeScreen extends Component {
   static navigationOptions = {
     title:            'Home',
@@ -73,20 +78,41 @@ class DetailsScreen extends Component {
     )
   }
 }
+*********/
 
-const AppNavigator = createStackNavigator(
+const getTabBarIcon = (navigation, focused, tintColor) => {
+  const { routeName }   = navigation.state
+  let   iconName
+
+  if(routeName === 'Home') {
+    iconName = 'ios-home'
+  }
+  else if(routeName === 'Stack') {
+    iconName = `ios-desktop`
+  }
+
+  // Return the icon component
+  return <Icon name={iconName} size={24} color={tintColor} />
+}
+
+const AppNavigator = createBottomTabNavigator(
   {
-    Home:     HomeScreen,
-    Details:  DetailsScreen,
+    Home:     { screen: HomeScreen },
+    Stack:    { screen: StackScreen },
   },
   {
-    initialRouteName: 'Home',
-    defaultNavigationOptions: {
-      headerStyle:      { backgroundColor: '#f4511e' },
-      headerTintColor:  '#fff',
-      headerTitleStyle: { fontWeight: 'bold' }
+    defaultNavigationOptions: ({navigation}) => ({
+      tabBarIcon: ({focused, tintColor}) => {
+        return getTabBarIcon(navigation, focused, tintColor)
+      },
+    }),
+    tabBarOptions: {
+      activeTintColor:    'tomato',
+      inactiveTintColor:  'gray',
+      labelStyle: {
+        fontSize:         16,
+      },
     }
-    
   }
 )
 
