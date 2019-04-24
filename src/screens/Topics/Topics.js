@@ -11,6 +11,10 @@ import {
 import styles                 from './styles'
 
 class TopicsScreen extends Component {
+  static navigationOptions = { 
+    title:  'Topics',
+  }
+
   render() {
     return (
       <View style={styles.container}>

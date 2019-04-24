@@ -11,6 +11,10 @@ import Icon                   from 'react-native-vector-icons/Ionicons'
 import styles                 from './styles'
 
 class ListScreen extends Component {
+  static navigationOptions = { 
+    title:        'List',
+  }
+
   render() {
     return (
       <View style={styles.container}>

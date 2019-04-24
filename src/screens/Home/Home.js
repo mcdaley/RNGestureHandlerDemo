@@ -6,12 +6,24 @@ import {
   View,
   Text,
   Button,
+  TouchableOpacity,
 }                             from 'react-native'
 import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
 class HomeScreen extends Component {
+  static navigationOptions = { 
+    title:        'Home',
+    headerRight:  (
+      <TouchableOpacity
+        onPress = { () => alert('Pressed the settings button') }
+      >
+        <Icon name='ios-settings' style={styles.headerIcon} />
+      </TouchableOpacity>
+    )
+  }
+
   render() {
     return (
       <View style={styles.container}>

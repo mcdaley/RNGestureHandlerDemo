@@ -98,10 +98,19 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   return <Icon name={iconName} size={24} color={tintColor} />
 }
 
-const HomeStack     = createStackNavigator({
-  Home:     HomeScreen,
-  Details:  DetailsScreen,
-})
+const HomeStack     = createStackNavigator(
+  {
+    Home:     HomeScreen,
+    Details:  DetailsScreen,
+  },
+  {
+    defaultNavigationOptions: {
+      headerTintColor:  '#fff',
+      headerStyle:      { backgroundColor: '#f4511e' },
+      headerTitleStyle: { fontWeight: 'bold' }
+    }
+  }
+)
 
 HomeStack.navigationOptions = ({ navigation }) => {
   let tabBarVisible = true
@@ -112,10 +121,19 @@ HomeStack.navigationOptions = ({ navigation }) => {
   return { tabBarVisible }
 }
 
-const TopicsStack    = createStackNavigator({
-  Topics:    TopicsScreen,
-  List:     ListScreen,
-})
+const TopicsStack    = createStackNavigator(
+  {
+    Topics:    TopicsScreen,
+    List:     ListScreen,
+  },
+  {
+    defaultNavigationOptions: {
+      headerTintColor:  '#fff',
+      headerStyle:      { backgroundColor: '#6C8AB7' },
+      headerTitleStyle: { fontWeight: 'bold' }
+    }
+  }
+)
 
 TopicsStack.navigationOptions = ({navigation}) => {
   let tabBarVisible = true

@@ -11,6 +11,11 @@ const styles = StyleSheet.create({
     flex:                 1,
     justifyContent:       'center',
     alignItems:           'center',
+  },
+  headerIcon: {
+    fontSize:           28,
+    color:              '#fff',
+    marginRight:        10,
   }
 })
 
