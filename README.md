@@ -4,11 +4,10 @@ to setup the layout for an app. The demo will show:
 
 [x] * Tabbed Navigation
 [x] * Stacked Navigation
-* Header Styling
+[x] * Header Styling
   [x] - Text
-  - Buttons/Icons/Images
-  - Search Window
-* Format Header Title using Selected Item
+  [x] - Buttons/Icons/Images
+[x] * Format Header Title using Selected Item
 * Drawer Navigation
 * Modal Windows
 [x] * Bottom Tab Styling
@@ -18,6 +17,8 @@ to setup the layout for an app. The demo will show:
   - Sign Up
   - Sign In
   - Forgot Password
+*  Search Window
+  - Add a search window in the header and link to a url/path
 
 ## To Do
 * Figure out how to add the default header to the createBottomTabNavigator

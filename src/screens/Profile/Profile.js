@@ -1,39 +1,28 @@
 //-----------------------------------------------------------------------------
-// src/screens/Home.js
+// src/screens/Profile/Profile.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
   View,
   Text,
-  Button,
-  TouchableOpacity,
 }                             from 'react-native'
 import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
-import Settings               from '../../components/Settings/Settings';
 
-class HomeScreen extends Component {
+class ProfileScreen extends Component {
   static navigationOptions = { 
-    title:        'Home',
-    headerRight:  (
-      <Text>Test</Text>
-    )
+    drawerLabel:  'Profile',
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Home Screen</Text>
-        <Icon name='ios-home' size={48} color='blue' />
-        <Button
-          title   = 'Go to Details'
-          onPress = { () => this.props.navigation.navigate('Details') }
-        />
+        <Text>Profile Screen</Text>
       </View>
     )
   }
 }
 
-// Export the HomeScreen
-export default HomeScreen
+// Export the ProfileScreen
+export default ProfileScreen
