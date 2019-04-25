@@ -11,14 +11,21 @@ import {
 import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
-import Settings               from '../../components/Settings/Settings';
 
+/**
+ * Home screen for the RNavigationDemo app. User can navigate to settings
+ * by clicking on the gear icon.
+ */
 class HomeScreen extends Component {
-  static navigationOptions = { 
-    title:        'Home',
-    headerRight:  (
-      <Text>Test</Text>
-    )
+  static navigationOptions = ({ navigation }) => {
+    return {
+      headerTitle: 'Home',
+      headerLeft:  (
+        <TouchableOpacity onPress = { () => navigation.navigate('UserSettings')}>
+          <Icon name='ios-settings' style={styles.headerIcon} />
+        </TouchableOpacity>
+      )
+    }
   }
 
   render() {

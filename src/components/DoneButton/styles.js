@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------------
-// src/screens/Home/styles.js
+// src/components/DoneButton/styles.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 /**
- * HomeScreen Styles
+ * DoneButtonScreen Styles
  */
 const styles = StyleSheet.create({
   container: {
@@ -12,10 +12,11 @@ const styles = StyleSheet.create({
     justifyContent:       'center',
     alignItems:           'center',
   },
-  headerIcon: {
-    fontSize:           28,
-    color:              '#fff',
+  headerLink: {
+    fontSize:           18,
+    color:              '#FFFFFF',
     margin:             10,
+    marginRight:        20,
   }
 })
 
