@@ -3,18 +3,13 @@
  */
 
 import React, { Component } from 'react';
-import { 
-  View,
-  Text,
-  Button,
-  TouchableOpacity,
-}                           from 'react-native';
 import {
   createBottomTabNavigator,
   createStackNavigator,
   createSwitchNavigator,
   createAppContainer,
 }                           from 'react-navigation'
+import createAnimatedSwitchNavigator from 'react-navigation-animated-switch'
 
 import Icon                 from 'react-native-vector-icons/Ionicons'
 
@@ -135,13 +130,10 @@ const TabNavigator  = createBottomTabNavigator(
   }
 )
 
-const AppContainer = createAppContainer(createSwitchNavigator(
+const AppContainer = createAppContainer(createAnimatedSwitchNavigator(
   {
     App:          TabNavigator,
     UserSettings: SettingsStack,
-  },
-  {
-    initialRouteName: 'App',
   }
 ))
 
