@@ -8,6 +8,7 @@ import {
   Button,
   TouchableOpacity,
 }                             from 'react-native'
+import AsyncStorage           from '@react-native-community/async-storage'
 
 import DoneButton             from '../../components/DoneButton/DoneButton'
 import styles                 from './styles'
@@ -29,6 +30,19 @@ class SettingsScreen extends Component {
     }
   }
 
+  /**
+   * Sign out a user and navigate back to home screen
+   */
+  _signOut = async () => {
+    try {
+      await AsyncStorage.removeItem('userToken')
+      this.props.navigation.navigate('SignIn')
+    }
+    catch(err) {
+      console.log(`[ERROR]: Failed to sign out user= `, err)
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -41,6 +55,12 @@ class SettingsScreen extends Component {
           title   = 'Go to Notifications'
           onPress = { () => this.props.navigation.navigate('Notifications')}
         />
+        <View style={styles.logout}>
+          <Button
+            title   = 'Sign Out'
+            onPress = { this._signOut }
+          />
+        </View>
       </View>
     )
   }

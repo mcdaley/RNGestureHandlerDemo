@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------------
-// src/screens/Settings/styles.js
+// src/screens/Authentication/AuthLoading/styles.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 /**
- * SettingsScreen Styles
+ * AuthLoadingScreen Styles
  */
 const styles = StyleSheet.create({
   container: {
@@ -12,9 +12,6 @@ const styles = StyleSheet.create({
     justifyContent:       'center',
     alignItems:           'center',
   },
-  logout: {
-    marginTop:            30,
-  }
 })
 
 // Export the styles

@@ -29,6 +29,7 @@ can click the **Done** button to navigate back to the __App__ navigation.
   - Sign Up
   - Sign In
   - Forgot Password
+* Centralize styling
 * Header Formats
   - Search Window and link to url/uri.
 * Add Modal screen

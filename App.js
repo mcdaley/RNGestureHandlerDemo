@@ -21,6 +21,26 @@ import NotificationsScreen  from './src/screens/Notifications/Notifications';
 import ProfileScreen        from './src/screens/Profile/Profile';
 import SettingsScreen       from './src/screens/Settings/Settings';
 import PersonalInfoScreen   from './src/screens/PersonalInfo/PersonalInfo'
+import AuthLoadingScreen    from './src/screens/Authentication/AuthLoading/AuthLoading'
+import SignInScreen         from './src/screens/Authentication/SignIn/SignIn';
+import SignUpScreen         from './src/screens/Authentication/SignUp/SignUp';
+
+/**
+ * Authentication Flow
+ */
+const AuthenticationStack = createStackNavigator(
+  {
+    SignIn:           SignInScreen,
+    SignUp:           SignUpScreen
+  },
+  {
+    defaultNavigationOptions: {
+      headerTintColor:  '#FFFFFF',
+      headerStyle:      { backgroundColor: '#845F4A' },
+      headerTitleStyle: { fontWeight: 'bold' },
+    }
+  },
+)
 
 /**
  * Create Settings Screen using a StackNavigator
@@ -132,8 +152,13 @@ const TabNavigator  = createBottomTabNavigator(
 
 const AppContainer = createAppContainer(createAnimatedSwitchNavigator(
   {
+    AuthLoading:  AuthLoadingScreen,
+    Auth:         AuthenticationStack,
     App:          TabNavigator,
     UserSettings: SettingsStack,
+  },
+  {
+    initialRouteName: 'AuthLoading'
   }
 ))
 
