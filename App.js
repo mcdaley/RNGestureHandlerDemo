@@ -25,8 +25,7 @@ import ListScreen           from './src/screens/List/List'
 import NotificationsScreen  from './src/screens/Notifications/Notifications';
 import ProfileScreen        from './src/screens/Profile/Profile';
 import SettingsScreen       from './src/screens/Settings/Settings';
-import DoneButton           from './src/components/DoneButton/DoneButton'
-import styles               from './src/screens/Settings/styles'
+import PersonalInfoScreen   from './src/screens/PersonalInfo/PersonalInfo'
 
 /**
  * Create Settings Screen using a StackNavigator
@@ -35,20 +34,16 @@ const SettingsStack = createStackNavigator(
   {
     Settings:       SettingsScreen,
     Profile:        ProfileScreen,
-    Notifications:  NotificationsScreen
+    Notifications:  NotificationsScreen,
+    PersonalInfo:   PersonalInfoScreen,
   },
   {
-    defaultNavigationOptions: ({ navigation }) => {
-      return {
-        headerRight:      ( 
-          <DoneButton navigation={navigation} />
-        ),
-        headerTintColor:  '#FFFFFF',
-        headerStyle:      { backgroundColor: '#f4511e' },
-        headerTitleStyle: { fontWeight: 'bold' },
-      }
+    defaultNavigationOptions: {
+      headerTintColor:  '#FFFFFF',
+      headerStyle:      { backgroundColor: '#f4511e' },
+      headerTitleStyle: { fontWeight: 'bold' },
     }
-  }
+  },
 )
 
 const HomeStack = createStackNavigator(

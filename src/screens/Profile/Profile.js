@@ -5,6 +5,7 @@ import React, { Component }   from 'react'
 import {
   View,
   Text,
+  Button,
 }                             from 'react-native'
 import Icon                   from 'react-native-vector-icons/Ionicons'
 
@@ -12,13 +13,17 @@ import styles                 from './styles'
 
 class ProfileScreen extends Component {
   static navigationOptions = { 
-    drawerLabel:  'Profile',
+    headerTitle:  'Profile',
   }
 
   render() {
     return (
       <View style={styles.container}>
         <Text>Profile Screen</Text>
+        <Button
+          title   = 'Go To Personal Info'
+          onPress = { () => this.props.navigation.push('PersonalInfo') }
+        />
       </View>
     )
   }

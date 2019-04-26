@@ -16,9 +16,6 @@ import styles                 from './styles'
  * Settings screen that allows users to manage their user profiles.
  */
 class SettingsScreen extends Component {
-  //* static navigationOptions = { 
-  //*   headerTitle:  'Settings',
-  //* }
   static navigationOptions = ({ navigation }) => {
     return {
       headerTitle: 'Settings',
