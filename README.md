@@ -7,6 +7,8 @@ The layout can be used to quickly get started building a new app with
 basic core layout, so you can focus on building the app logic instead of 
 doing all of the grunt work of setting up the app.
 
+[Add some snapshots of the app]
+
 [Add directions for getting up and ready]
 
 ## Layout

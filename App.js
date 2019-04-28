@@ -13,17 +13,17 @@ import createAnimatedSwitchNavigator from 'react-navigation-animated-switch'
 
 import Icon                 from 'react-native-vector-icons/Ionicons'
 
-import HomeScreen           from './src/screens/App/Home/Home'
-import TopicsScreen         from './src/screens/App/Topics/Topics'
-import DetailsScreen        from './src/screens/App/Details/Details'
-import ListScreen           from './src/screens/App/List/List'
-import SettingsScreen       from './src/screens/Settings/Settings/Settings'
-import NotificationsScreen  from './src/screens/Settings/Notifications/Notifications'
-import ProfileScreen        from './src/screens/Settings/Profile/Profile'
-import PersonalInfoScreen   from './src/screens/Settings/PersonalInfo/PersonalInfo'
-import AuthLoadingScreen    from './src/screens/Authentication/AuthLoading/AuthLoading'
-import SignInScreen         from './src/screens/Authentication/SignIn/SignIn'
-import SignUpScreen         from './src/screens/Authentication/SignUp/SignUp'
+import HomeScreen           from './src/screens/app/Home/Home'
+import TopicsScreen         from './src/screens/app/Topics/Topics'
+import DetailsScreen        from './src/screens/app/Details/Details'
+import ListScreen           from './src/screens/app/List/List'
+import SettingsScreen       from './src/screens/settings/Settings/Settings'
+import NotificationsScreen  from './src/screens/settings/Notifications/Notifications'
+import ProfileScreen        from './src/screens/settings/Profile/Profile'
+import PersonalInfoScreen   from './src/screens/settings/PersonalInfo/PersonalInfo'
+import AuthLoadingScreen    from './src/screens/authentication/AuthLoading/AuthLoading'
+import SignInScreen         from './src/screens/authentication/SignIn/SignIn'
+import SignUpScreen         from './src/screens/authentication/SignUp/SignUp'
 import {
   headerTextColor,
   authHeaderBackgroundColor,
