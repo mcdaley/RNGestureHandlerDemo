@@ -1,14 +1,14 @@
 //-----------------------------------------------------------------------------
-// src/screens/Home/styles.js
+// src/screens/App/Details/styles.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 import {
   headerOne,
-}                     from '../../styles/index'
+}                     from '../../../styles/index'
 
 /**
- * HomeScreen Styles
+ * DetailsScreen Styles
  */
 const styles = StyleSheet.create({
   container: {
@@ -18,11 +18,6 @@ const styles = StyleSheet.create({
   },
   headerOne: {
     ...headerOne,
-  },
-  headerIcon: {
-    fontSize:           28,
-    color:              '#fff',
-    margin:             10,
   }
 })
 

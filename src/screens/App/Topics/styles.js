@@ -1,14 +1,14 @@
 //-----------------------------------------------------------------------------
-// src/screens/List/styles.js
+// src/screens/App/Stack.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 import {
   headerOne,
-}                     from '../../styles/index'
+}                     from '../../../styles/index'
 
 /**
- * ListScreen Styles
+ * StackScreen Styles
  */
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
   },
   headerOne: {
     ...headerOne,
-    marginBottom:         40,
   }
 })
 

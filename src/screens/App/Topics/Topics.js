@@ -1,29 +1,31 @@
 //-----------------------------------------------------------------------------
-// src/screens/Details/Details.js
+// src/screens/App/Topics.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
   View,
   Text,
+  Button,
 }                             from 'react-native'
-import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
-class DetailsScreen extends Component {
+class TopicsScreen extends Component {
   static navigationOptions = { 
-    title:        'Details',
+    title:  'Topics',
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headerOne}>Details Screen</Text>
-        <Icon name='ios-flash' size={48} color='orange' />
+        <Text style={styles.headerOne}>Topics Screen</Text>
+        <Button
+          title   = 'Go to List'
+          onPress = { () => this.props.navigation.navigate('List') }
+        />
       </View>
     )
   }
 }
 
-// Export the DetailsScreen
-export default DetailsScreen
+export default TopicsScreen

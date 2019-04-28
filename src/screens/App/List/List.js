@@ -1,31 +1,29 @@
 //-----------------------------------------------------------------------------
-// src/screens/Topics.js
+// src/screens/App/List/List.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
   View,
   Text,
-  Button,
 }                             from 'react-native'
+import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
-class TopicsScreen extends Component {
+class ListScreen extends Component {
   static navigationOptions = { 
-    title:  'Topics',
+    title:        'List',
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headerOne}>Topics Screen</Text>
-        <Button
-          title   = 'Go to List'
-          onPress = { () => this.props.navigation.navigate('List') }
-        />
+        <Text style={styles.headerOne}>List Screen</Text>
+        <Icon name='ios-radio' size={48} color='cyan' />
       </View>
     )
   }
 }
 
-export default TopicsScreen
+// Export the ListScreen
+export default ListScreen

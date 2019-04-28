@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// src/screens/List/List.js
+// src/screens/App/Details/Details.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
@@ -10,20 +10,20 @@ import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
-class ListScreen extends Component {
+class DetailsScreen extends Component {
   static navigationOptions = { 
-    title:        'List',
+    title:        'Details',
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headerOne}>List Screen</Text>
-        <Icon name='ios-radio' size={48} color='cyan' />
+        <Text style={styles.headerOne}>Details Screen</Text>
+        <Icon name='ios-flash' size={48} color='orange' />
       </View>
     )
   }
 }
 
-// Export the ListScreen
-export default ListScreen
+// Export the DetailsScreen
+export default DetailsScreen
