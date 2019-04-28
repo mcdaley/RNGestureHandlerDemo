@@ -1,33 +1,28 @@
 //-----------------------------------------------------------------------------
-// src/screens/Profile/Profile.js
+// src/screens/Settings/Notifications/Notifications.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {
   View,
   Text,
-  Button,
 }                             from 'react-native'
 import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
-class ProfileScreen extends Component {
+class NotificationsScreen extends Component {
   static navigationOptions = { 
-    headerTitle:  'Profile',
+    headerTitle:  'Notifications',
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headerOne}>Profile Screen</Text>
-        <Button
-          title   = 'Go To Personal Info'
-          onPress = { () => this.props.navigation.push('PersonalInfo') }
-        />
+        <Text style={styles.headerOne}>Notifications Screen</Text>
       </View>
     )
   }
 }
 
-// Export the ProfileScreen
-export default ProfileScreen
+// Export the NotificationsScreen
+export default NotificationsScreen

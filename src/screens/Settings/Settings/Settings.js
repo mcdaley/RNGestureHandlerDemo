@@ -10,7 +10,6 @@ import {
 }                             from 'react-native'
 import AsyncStorage           from '@react-native-community/async-storage'
 
-import DoneButton             from '../../components/DoneButton/DoneButton'
 import styles                 from './styles'
 
 /**

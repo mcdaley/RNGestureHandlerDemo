@@ -1,14 +1,14 @@
 //-----------------------------------------------------------------------------
-// src/screens/PersonalInfo/styles.js
+// src/screens/Settings/Notifications/styles.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 import {
   headerOne,
-}                     from '../../styles/index'
+}                     from '../../../styles/index'
 
 /**
- * PersonalInfoScreen Styles
+ * Notifications Screen Styles
  */
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
   },
   headerOne: {
     ...headerOne,
-  }
+    fontWeight:           'bold',
+  },
 })
 
 // Export the styles

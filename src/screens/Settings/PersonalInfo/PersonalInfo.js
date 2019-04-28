@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// src/screens/PersonalInfo/PersonalInfo.js
+// src/screens/Settings/PersonalInfo/PersonalInfo.js
 //-----------------------------------------------------------------------------
 import React, { Component }   from 'react'
 import {

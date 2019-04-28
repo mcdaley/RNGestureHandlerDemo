@@ -1,14 +1,14 @@
 //-----------------------------------------------------------------------------
-// src/screens/Settings/styles.js
+// src/screens/Settings/PersonalInfo/styles.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 import {
   headerOne,
-}                     from '../../styles/index'
+}                     from '../../../styles/index'
 
 /**
- * SettingsScreen Styles
+ * PersonalInfoScreen Styles
  */
 const styles = StyleSheet.create({
   container: {
@@ -18,11 +18,6 @@ const styles = StyleSheet.create({
   },
   headerOne: {
     ...headerOne,
-    fontSize:             22,
-    fontWeight:           'bold',
-  },
-  logout: {
-    marginTop:            30,
   }
 })
 

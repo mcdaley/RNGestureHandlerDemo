@@ -1,14 +1,14 @@
 //-----------------------------------------------------------------------------
-// src/screens/Notifications/styles.js
+// src/screens/Settings/Profile/styles.js
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
 import {
   headerOne,
-}                     from '../../styles/index'
+}                     from '../../../styles/index'
 
 /**
- * Notifications Screen Styles
+ * ProfileScreen Styles
  */
 const styles = StyleSheet.create({
   container: {
@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
   },
   headerOne: {
     ...headerOne,
-    fontWeight:           'bold',
-  },
+  }
 })
 
 // Export the styles
