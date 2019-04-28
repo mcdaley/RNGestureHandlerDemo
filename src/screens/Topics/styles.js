@@ -3,6 +3,10 @@
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
+import {
+  headerOne,
+}                     from '../../styles/index'
+
 /**
  * StackScreen Styles
  */
@@ -11,6 +15,9 @@ const styles = StyleSheet.create({
     flex:                 1,
     justifyContent:       'center',
     alignItems:           'center',
+  },
+  headerOne: {
+    ...headerOne,
   }
 })
 

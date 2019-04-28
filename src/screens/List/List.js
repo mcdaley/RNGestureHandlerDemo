@@ -18,7 +18,7 @@ class ListScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>List Screen</Text>
+        <Text style={styles.headerOne}>List Screen</Text>
         <Icon name='ios-radio' size={48} color='cyan' />
       </View>
     )

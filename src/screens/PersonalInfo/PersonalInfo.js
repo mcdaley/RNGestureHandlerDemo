@@ -17,13 +17,13 @@ import styles                 from './styles'
  */
 class PersonalInfoScreen extends Component {
   static navigationOptions = { 
-    headerTitle:  'PersonalInfo',
+    headerTitle:  'Personal Info',
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>PersonalInfo Screen</Text>
+        <Text style={styles.headerOne}>Personal Info Screen</Text>
         <Button
           title   = 'Go Back'
           onPress = { () => this.props.navigation.pop() }

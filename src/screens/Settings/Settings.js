@@ -46,7 +46,7 @@ class SettingsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Settings Screen</Text>
+        <Text style={styles.headerOne}>Settings Screen</Text>
         <Button
           title   = 'Go to Profile'
           onPress = { () => this.props.navigation.navigate('Profile')}

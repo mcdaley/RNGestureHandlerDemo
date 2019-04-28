@@ -3,6 +3,10 @@
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
+import {
+  headerOne,
+}                     from '../../../styles/index'
+
 /**
  * AuthLoadingScreen Styles
  */
@@ -12,6 +16,10 @@ const styles = StyleSheet.create({
     justifyContent:       'center',
     alignItems:           'center',
   },
+  headerOne: {
+    ...headerOne,
+    fontWeight:           'bold',
+  }
 })
 
 // Export the styles

@@ -36,7 +36,7 @@ class SignInScreen extends Component {
 
     return (
       <View style={styles.container}>
-        <Text>Sign In Screen</Text>
+        <Text style={styles.headerOne}>Sign In Screen</Text>
         <Button 
           title     = 'Sign In'
           onPress   = { () => this._signInAsync(DEFAULT_USER_ID) }

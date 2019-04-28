@@ -3,6 +3,10 @@
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
+import {
+  headerOne,
+}                     from '../../styles/index'
+
 /**
  * ListScreen Styles
  */
@@ -11,6 +15,10 @@ const styles = StyleSheet.create({
     flex:                 1,
     justifyContent:       'center',
     alignItems:           'center',
+  },
+  headerOne: {
+    ...headerOne,
+    marginBottom:         40,
   }
 })
 

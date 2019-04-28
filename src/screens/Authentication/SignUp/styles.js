@@ -3,6 +3,10 @@
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
+import {
+  headerOne,
+}                     from '../../../styles/index'
+
 /**
  * SignUpScreen Styles
  */
@@ -12,6 +16,11 @@ const styles = StyleSheet.create({
     justifyContent:       'center',
     alignItems:           'center',
   },
+  headerOne: {
+    ...headerOne,
+    marginBottom:         30,
+    fontWeight:           'bold',
+  }
 })
 
 // Export the styles

@@ -17,13 +17,20 @@ import HomeScreen           from './src/screens/Home/Home'
 import TopicsScreen         from './src/screens/Topics/Topics'
 import DetailsScreen        from './src/screens/Details/Details'
 import ListScreen           from './src/screens/List/List'
-import NotificationsScreen  from './src/screens/Notifications/Notifications';
-import ProfileScreen        from './src/screens/Profile/Profile';
-import SettingsScreen       from './src/screens/Settings/Settings';
+import NotificationsScreen  from './src/screens/Notifications/Notifications'
+import ProfileScreen        from './src/screens/Profile/Profile'
+import SettingsScreen       from './src/screens/Settings/Settings'
 import PersonalInfoScreen   from './src/screens/PersonalInfo/PersonalInfo'
 import AuthLoadingScreen    from './src/screens/Authentication/AuthLoading/AuthLoading'
-import SignInScreen         from './src/screens/Authentication/SignIn/SignIn';
-import SignUpScreen         from './src/screens/Authentication/SignUp/SignUp';
+import SignInScreen         from './src/screens/Authentication/SignIn/SignIn'
+import SignUpScreen         from './src/screens/Authentication/SignUp/SignUp'
+import {
+  headerTextColor,
+  authHeaderBackgroundColor,
+  headerFontWeight,
+  appHeaderBackgroundColor,
+  topicsHeaderBackgroundColor,
+}                           from './src/styles/index'
 
 /**
  * Authentication Flow
@@ -35,9 +42,9 @@ const AuthenticationStack = createStackNavigator(
   },
   {
     defaultNavigationOptions: {
-      headerTintColor:  '#FFFFFF',
-      headerStyle:      { backgroundColor: '#845F4A' },
-      headerTitleStyle: { fontWeight: 'bold' },
+      headerTintColor:  headerTextColor,
+      headerStyle:      { backgroundColor: authHeaderBackgroundColor },
+      headerTitleStyle: { fontWeight: headerFontWeight },
     }
   },
 )
@@ -54,9 +61,9 @@ const SettingsStack = createStackNavigator(
   },
   {
     defaultNavigationOptions: {
-      headerTintColor:  '#FFFFFF',
-      headerStyle:      { backgroundColor: '#f4511e' },
-      headerTitleStyle: { fontWeight: 'bold' },
+      headerTintColor:  headerTextColor,
+      headerStyle:      { backgroundColor: appHeaderBackgroundColor },
+      headerTitleStyle: { fontWeight: headerFontWeight },
     }
   },
 )
@@ -68,9 +75,9 @@ const HomeStack = createStackNavigator(
   },
   {
     defaultNavigationOptions: {
-      headerTintColor:  '#fff',
-      headerStyle:      { backgroundColor: '#f4511e' },
-      headerTitleStyle: { fontWeight: 'bold' }
+      headerTintColor:  headerTextColor,
+      headerStyle:      { backgroundColor: appHeaderBackgroundColor },
+      headerTitleStyle: { fontWeight: headerFontWeight }
     }
   }
 )
@@ -91,9 +98,9 @@ const TopicsStack    = createStackNavigator(
   },
   {
     defaultNavigationOptions: {
-      headerTintColor:  '#fff',
-      headerStyle:      { backgroundColor: '#6C8AB7' },
-      headerTitleStyle: { fontWeight: 'bold' }
+      headerTintColor:  headerTextColor,
+      headerStyle:      { backgroundColor: topicsHeaderBackgroundColor },
+      headerTitleStyle: { fontWeight: headerFontWeight }
     }
   }
 )

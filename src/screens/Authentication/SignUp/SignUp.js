@@ -19,12 +19,12 @@ class SignUpScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Sign In Screen</Text>
+        <Text style={styles.headerOne}>Sign Up Screen</Text>
         <View>
           <Text>Already have an account?</Text>
           <Button
           title   = 'Sign In'
-          onPress = { () => this.props.navigation.push('SignUp') }
+          onPress = { () => this.props.navigation.navigate('SignIn') }
         />
         </View>
       </View>

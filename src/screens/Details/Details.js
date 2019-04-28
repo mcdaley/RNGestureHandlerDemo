@@ -18,7 +18,7 @@ class DetailsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Details Screen</Text>
+        <Text style={styles.headerOne}>Details Screen</Text>
         <Icon name='ios-flash' size={48} color='orange' />
       </View>
     )

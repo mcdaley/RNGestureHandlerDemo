@@ -6,8 +6,11 @@ import {
   ActivityIndicator,
   StatusBar,
   View,
+  Text,
 }                             from 'react-native'
 import AsyncStorage           from '@react-native-community/async-storage'
+
+import styles                 from './styles'
 
 /**
  * Loading screen app displays when the user starts the app. If the user is 
@@ -33,7 +36,10 @@ class AuthLoadingScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
+        <Text style={styles.headerOne}>
+          Welcome to the App
+        </Text>
         <ActivityIndicator />
         <StatusBar barStyle='default' />
       </View>

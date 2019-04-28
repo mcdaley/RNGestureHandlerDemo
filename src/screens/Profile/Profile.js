@@ -19,7 +19,7 @@ class ProfileScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Profile Screen</Text>
+        <Text style={styles.headerOne}>Profile Screen</Text>
         <Button
           title   = 'Go To Personal Info'
           onPress = { () => this.props.navigation.push('PersonalInfo') }

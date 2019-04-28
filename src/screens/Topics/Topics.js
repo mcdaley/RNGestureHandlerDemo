@@ -18,7 +18,7 @@ class TopicsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Topics Screen</Text>
+        <Text style={styles.headerOne}>Topics Screen</Text>
         <Button
           title   = 'Go to List'
           onPress = { () => this.props.navigation.navigate('List') }

@@ -8,7 +8,7 @@ basic core layout, so you can focus on building the app logic.
 
 ## Layout
 
-### Tab Navigation
+### App Navigation
 Users can navigate to different sections of the app by clicking on the
 bottom tabs. Each tab is implemented using **stack navigation**, so users
 can drill down on the screens in each tabbed section.
@@ -24,15 +24,19 @@ navigation is built using the SwitchNavigator. When a user clicks on the
 gear then the user is directed to the __Settings__ navigation. The user
 can click the **Done** button to navigate back to the __App__ navigation.
 
+### Authentication Navigation
+The app provides the screens and workflow to implement sign-in and sign-up
+for the application. When a user starts the app, the auth-loading screen
+will check to see if the user is logged-in by checking for a token using
+the async-storage. If the use is logged-in then the user is navigated to 
+the Home page, otherwise the user is navigated to the Sign In page.
+
 ## To Do
-* Add Authentication navigation flow
-  - Sign Up
-  - Sign In
-  - Forgot Password
 * Centralize styling
 * Header Formats
   - Search Window and link to url/uri.
 * Add Modal screen
+* Do I need to create a higher order component to manage signed-in users?
 
 ## To Do
 * Figure out how to add the default header to the createBottomTabNavigator

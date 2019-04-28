@@ -18,7 +18,7 @@ class NotificationsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Notifications Screen</Text>
+        <Text style={styles.headerOne}>Notifications Screen</Text>
       </View>
     )
   }

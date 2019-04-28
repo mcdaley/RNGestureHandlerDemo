@@ -3,6 +3,10 @@
 //-----------------------------------------------------------------------------
 import { StyleSheet } from 'react-native'
 
+import {
+  headerOne,
+}                     from '../../styles/index'
+
 /**
  * PersonalInfoScreen Styles
  */
@@ -12,6 +16,9 @@ const styles = StyleSheet.create({
     justifyContent:       'center',
     alignItems:           'center',
   },
+  headerOne: {
+    ...headerOne,
+  }
 })
 
 // Export the styles

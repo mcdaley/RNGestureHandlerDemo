@@ -31,7 +31,7 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Home Screen</Text>
+        <Text style={styles.headerOne}>Home Screen</Text>
         <Icon name='ios-home' size={48} color='blue' />
         <Button
           title   = 'Go to Details'
