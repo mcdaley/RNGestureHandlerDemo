@@ -1,4 +1,4 @@
-package com.rnavigationdemo;
+package com.rngesturehandlerdemo;
 
 import android.app.Application;
 

@@ -1,4 +1,4 @@
-# RNavigationDemo
+# RNGestureHandlerDemo
 An example React Native app that demonstrates how to use React Navigation
 to setup the layout for an app. The app provides a basic layout with tabs
 and also a settings section for managing a user's profile.
