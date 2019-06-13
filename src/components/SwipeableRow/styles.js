@@ -15,6 +15,12 @@ const styles = StyleSheet.create({
     backgroundColor:      'transparent',
     padding:              10,
   },
+  actionIcon: {
+    color:                'white',
+    fontSize:             30,
+    backgroundColor:      'transparent',
+    padding:              10,
+  },
   rightAction: {
     alignItems:           'center',
     flex:                 1,

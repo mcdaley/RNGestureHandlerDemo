@@ -9,6 +9,7 @@ import {
 }                             from 'react-native'
 import { RectButton }         from 'react-native-gesture-handler'
 import Swipeable              from 'react-native-gesture-handler/Swipeable'
+import Icon                   from 'react-native-vector-icons/Ionicons'
 
 import styles                 from './styles'
 
@@ -38,8 +39,8 @@ class SwipeableRow extends Component {
 
   renderRightAction = (text, color, x, progress) => {
     const trans = progress.interpolate({
-      inputRange: [0, 1],
-      outputRange: [x, 0],
+      inputRange:   [0, 1],
+      outputRange:  [x, 0],
     });
 
     const pressHandler = () => {
@@ -57,18 +58,29 @@ class SwipeableRow extends Component {
         </RectButton>
       </Animated.View>
     )
+  }
 
-    /**
+  renderRightActionIcon = ({icon, color, x, progress, onPress}) => {
+    const trans = progress.interpolate({
+      inputRange:   [0, 1],
+      outputRange:  [x, 0],
+    });
+
+    const pressHandler = () => {
+      this.close()
+      onPress()
+    }
+
     return (
-      <Animated.View style={{ flex: 1, transform: [{ translateX: trans }] }}>
+      <Animated.View style={{ flex: 1, transform: [{ translateX: trans}] }}>
         <RectButton
-          style={[styles.rightAction, { backgroundColor: color }]}
-          onPress={pressHandler}>
-          <Text style={styles.actionText}>{text}</Text>
+          style   = {[styles.rightAction, {backgroundColor: color}]}
+          onPress = {pressHandler}
+        >
+          <Icon name={icon} style={styles.actionIcon} />
         </RectButton>
       </Animated.View>
-    );
-    */
+    )
   }
 
   /////////////////////////////////////////////////////////////////////////////
@@ -80,7 +92,14 @@ class SwipeableRow extends Component {
   renderRightActions = (progress) => (
     <View style={{ width: 150, flexDirection: 'row' }}>
       {this.renderRightAction('More',   '#C8C7CD', 150, progress)}
-      {this.renderRightAction('Delete', '#dd2c00', 75,  progress)}
+      {this.renderRightActionIcon({
+        icon:     'ios-trash', 
+        color:    '#dd2c00', 
+        x:        75,  
+        progress: progress,
+        onPress:  () => alert('Clicked on Delete'),
+        })
+      }
     </View>
   )
 
